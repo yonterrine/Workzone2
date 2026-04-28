@@ -1,7 +1,4 @@
- 
- 
- 
- 
+
  
  <header class="bg-indigo-600 text-white py-6 shadow">
         <div class="max-w-6xl mx-auto px-4">
