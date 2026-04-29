@@ -16,7 +16,7 @@ class Database
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES => false,
-    ];
+    ]; (SIR HINDI KO ALAM BAKIT NAG AUTOMATICALLY NAG ADD NG CODE NA YUNG SA ITAAS, HINDI KO YUNG NILAGAY, SORRY PO)
     public function query($sql, $params = [])
     {
         $stmt = $this->pdo->prepare($sql);
