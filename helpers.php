@@ -18,3 +18,8 @@ $partialPath = basePath("views/partials/$name.php");
         echo "Partial view '$name' not found.";
     }
 }
+function inspect($value): void {
+    echo '<pre>';
+    var_dump($value);
+    echo '</pre>';
+}

@@ -17,15 +17,21 @@ class Database
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES => false,
     ]; (SIR HINDI KO ALAM BAKIT NAG AUTOMATICALLY NAG ADD NG CODE NA YUNG SA ITAAS, HINDI KO YUNG NILAGAY, SORRY PO)
-    public function query($sql, $params = [])
-    {
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute($params);
-        return $stmt;
-    }
 
-    public function fetchAll($sql, $params = [])
+
+    try() {
+        $pdo = new PDO($dsn, $config['username'], $config['password'], $options);
+    } catch (PDOException $e) {
+        throw new PDOException($e->getMessage(), (int)$e->getCode());
+    }
+    public function Query($Query)
     {
-        return $this->query($sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+        try {
+            $sth = $this->conn->prepare($Query);
+            $sth->execute();
+            return $sth->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            throw new Exception("Database query error: " . $e->getMessage());
+        }
     }
 }
