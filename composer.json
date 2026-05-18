@@ -1,0 +1,18 @@
+{
+ 'name': "Yumi/WSO3-php",
+ "description": "Job seeker application",
+ "authors": [
+  {
+   "name": "Yumi Austria",
+   "email": "yumi@example.com"  
+
+}
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    
+    }
+}
