@@ -6,6 +6,12 @@ class Router
 {
     private $routes = [];
 
+
+    public function registerRoute($method, $uri, $action)
+    {
+        $this->routes[$method][$path] = $handler;
+    }
+
     public function get($path, $handler)
     {
         $this->addRoute('GET', $path, $handler);
