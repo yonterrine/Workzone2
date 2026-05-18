@@ -17,6 +17,10 @@ function basePath(string $path = ''): string {
 require_once __DIR__ . '/../vendor/autoload.php';
 require '../helpers.php';
 
+
+use Framework\Router;
+use Framework\Database;
+
 $router = new Router();
 
 // Register routes
