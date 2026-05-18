@@ -14,7 +14,8 @@ function basePath(string $path = ''): string {
 }
 
 // Re-require after basePath is available
-require_once __DIR__ . '/helpers.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require '../helpers.php';
 
 $router = new Router();
 
