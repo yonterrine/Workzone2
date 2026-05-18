@@ -1,5 +1,7 @@
 <?php
 
+use Framework\Database;
+
 $config = require basePath('config/db.php');
 
 $db = new Database($config);
@@ -7,3 +9,8 @@ $db = new Database($config);
 $listings = $db->Query('SELECT * FROM listings Limit 6') ->fetchAll();
 
 inspect($listings);
+
+loadView('home', [
+    'listings' => $listings
+]);
+

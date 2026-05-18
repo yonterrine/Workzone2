@@ -19,7 +19,7 @@ require '../helpers.php';
 
 
 use Framework\Router;
-use Framework\Database;
+
 
 $router = new Router();
 
